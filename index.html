@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+    </head>
+    <body>
+        
+        <a-scene backgroundcolor="darkblue">
+            <a-camera position="0 8 15" ></a-camera>
+        <a-assets timeout="10000">
+            <a-asset-item id="background" src="./background/scene.gltf"></a-asset-item>
+            <a-asset-item id="bench" src="./bench/scene.gltf"></a-asset-item>
+            <a-asset-item id="lamp" src="./lamp/scene.gltf"></a-asset-item>
+            <a-asset-item id="scifi_girl_v.01" src="./scifi_girl_v.01/scene.gltf"></a-asset-item>
+           
+                
+        </a-assets>
+
+       
+        <a-entity light="type:ambient;intensity:0.5;">
+            
+        </a-entity>
+        <a-entity animation="property:rotation;to:0 360 0;easing:linear;loop:true;dur:60000">
+        <a-entity light="type:directional;castShadow:true;intensity:1;distance:50;decay:2;color:yellow"position="-100 18 20">
+
+        </a-entity>
+        </a-entity>
+        <a-circle position="-0.4 -0.76 -25" rotation="-90 0 0" radius="100" shadow="receive:true" visble="true" color="#2e6f10" >
+
+        </a-circle>
+
+        <a-entity>
+        <a-entity position="-5 2 0" rotation="0 55 0" scale="0.05 0.05 0.05" gltf-model="#background" shadow="cast:true;"></a-entity>
+        </a-entity>
+        
+        <a-entity>
+        <a-entity position="0 3.5 8" rotation="0 5 0" scale="3 3 3" gltf-model="#bench" shadow="cast:true;receive:false"></a-entity>
+        </a-entity>
+
+        <a-entity>
+        <a-entity position="20 0 -5" rotation="0 -90 0" scale="0.5 0.5 0.5" gltf-model="#lamp" shadow="cast:true;receive:false"></a-entity>
+        </a-entity>
+
+        <a-entity>
+        <a-entity position="0 4 9" rotation="0 -90 0" scale="1 1 1" gltf-model="#scifi_girl_v.10" shadow="cast:true;receive:false"></a-entity>
+        </a-entity>
+        
+       
+        
+            
+  
+    </a-entity>
+    
+    
+    </a-scene>
+    </body>
+</html>
